@@ -10,9 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery.countdown.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.plugin.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -27,6 +30,18 @@
             <div class="header__bottom center_block">
                 <div class="header__l-side">
                     <div class="header__tit">Xûr is on the EDZ at Winding Cove</div>
+                    <div class="header__timer">
+                        <script>
+                            $(function () { 
+                                $('#defaultCountdown').countdown({
+                                    format: 'HMS',
+                                    until: new Date(2022, 11 - 1, 12)
+                                }); 
+                                
+                            })
+                        </script>
+                        <div id="defaultCountdown"></div>
+                    </div>
                 </div>
                 <div class="header__r-side">
                     <img src="./img/img6.png" alt="">
