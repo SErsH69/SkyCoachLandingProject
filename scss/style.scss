@@ -88,7 +88,12 @@ textarea {
     min-height: 690px;
     @media all and (max-width: 1023px) {
         padding-top: 16px;
-        padding-bottom: 150px;
+        padding-bottom: 0px;
+        border-radius: 0;
+        min-height: 355px;    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     &__top {
         display: flex;
@@ -164,9 +169,16 @@ textarea {
     }
     &__bottom {
         display: flex;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+            margin-top: auto;
+        }
     }
     &__l-side {
         width: 50%;
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
     }
     &__tit {
         font-style: normal;
@@ -174,6 +186,12 @@ textarea {
         font-size: 72px;
         line-height: 80px;
         color: #FFFFFF;
+        margin-bottom: 40px;
+        @media all and (max-width: 1023px) {
+            margin-bottom: 16px;
+            font-size: 32px;
+            line-height: 40px;
+        }
     }
     &__r-side {
         width: 50%;
@@ -181,11 +199,24 @@ textarea {
         position: absolute;
         bottom: 0;
         right: 0;
+        @media all and (max-width: 1023px) {
+            width: 100%;
+            position: relative;
+            text-align: center;
+            img {
+                width: 230px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
 
     }
 }
 // header end
 // block_top
+.wpcf7-spinner {
+    display: none !important;
+}
 .block_top {    
     margin-top: -75px;
     position: relative;
@@ -220,17 +251,28 @@ textarea {
         }
         form {
             height: 58px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             @media all and (max-width: 1023px) {
-                flex-direction: column;
                 height: auto;
             }
-            input {
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @media all and (max-width: 1023px) {
+                    flex-direction: column;
+                }
+                > span {
+                    width: 100%;
+                    display: block;
+                    margin-right: 16px;
+                    @media all and (max-width: 1023px) {
+                        margin-right: 0;
+                    }
+                }
+            }
+            input[type="email"] {
                 width: 100%;
                 border: 0;
-                margin-right: 16px;
                 background: #3C39D1;
                 border-radius: 4px;
                 padding: 17px 24px;
@@ -250,11 +292,12 @@ textarea {
                     line-height: 20px;
                 }
             }
-            button {
+            button, input[type="submit"] {
                 font-style: normal;
                 font-weight: 700;
                 font-size: 19px;
                 line-height: 24px;  
+                height: 58px;
                 color: #000000;
                 padding: 17px 24px;
                 cursor: pointer;
@@ -271,6 +314,7 @@ textarea {
                     padding: 14px;
                     width: 100%;
                     font-size: 15px;
+                    height: 48px;
                     line-height: 20px;
                 }
             }
