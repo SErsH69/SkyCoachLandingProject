@@ -90,10 +90,15 @@ textarea {
         padding-top: 16px;
         padding-bottom: 0px;
         border-radius: 0;
-        min-height: 355px;    
+        min-height: 430px;    
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    &__timer {
+        @media all and (max-width: 1023px) {
+            height: 85px;
+        }
     }
     &__top {
         display: flex;
@@ -679,16 +684,18 @@ textarea {
         border-radius: 0;
         background-size: 300%;
     }
-    &__title {
+    &__title, h2, h1 {
         font-style: normal;
         font-weight: 700;
         font-size: 72px;
         line-height: 80px;
         margin-bottom: 32px;
         color: #FFFFFF;
+        margin-top: 64px;
         @media all and (max-width: 1023px) {
             font-size: 32px;
             line-height: 40px;
+            margin-top: 32px;
             margin-bottom: 16px;
         }
     }
@@ -921,17 +928,28 @@ textarea {
         }
         form {
             height: 58px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             @media all and (max-width: 1023px) {
-                flex-direction: column;
                 height: auto;
             }
-            input {
+            p {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @media all and (max-width: 1023px) {
+                    flex-direction: column;
+                }
+                > span {
+                    width: 100%;
+                    display: block;
+                    margin-right: 16px;
+                    @media all and (max-width: 1023px) {
+                        margin-right: 0;
+                    }
+                }
+            }
+            input[type="email"] {
                 width: 100%;
                 border: 0;
-                margin-right: 16px;
                 background: #3C39D1;
                 border-radius: 4px;
                 padding: 17px 24px;
@@ -951,11 +969,12 @@ textarea {
                     line-height: 20px;
                 }
             }
-            button {
+            button, input[type="submit"] {
                 font-style: normal;
                 font-weight: 700;
                 font-size: 19px;
                 line-height: 24px;  
+                height: 58px;
                 color: #000000;
                 padding: 17px 24px;
                 cursor: pointer;
@@ -972,6 +991,7 @@ textarea {
                     padding: 14px;
                     width: 100%;
                     font-size: 15px;
+                    height: 48px;
                     line-height: 20px;
                 }
             }
@@ -1133,3 +1153,109 @@ textarea {
     }
 }
 // footer end
+
+// wp style
+.wpcf7-not-valid-tip, .wpcf7-response-output {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  color: #fff;
+  transform: translate(50%, 50%);
+  right: 50%;
+  bottom: 50%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  background: #000;
+  line-height: 20px;
+  transition: all .3s ease-out;
+}
+@keyframes hideBlock {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    50% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+.invalid .wpcf7-not-valid-tip {
+    animation: 5s linear 0s alternate hideBlock;
+}
+.sent .wpcf7-response-output {
+    animation: 5s linear 0s alternate hideBlock;
+}
+.wpcf7-not-valid-tip, .wpcf7-not-valid-tip {
+  border: 2px solid red;
+  padding: 5px;
+}
+.jedi-dashboard {
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+}
+.jedi-dash {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media all and (max-width: 480px) {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+        margin-left: 2px !important;
+        margin-right: 2px !important;
+    }
+}
+.jedi-dash_title {
+    position: relative !important;
+    transform: unset !important;
+    left: unset !important;
+    top: unset !important;
+    width: auto !important;
+    height: auto !important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px !important;
+    order: 2;
+    width: 100% !important;
+    line-height: 24px;
+    color: #FFFFFF !important;
+    margin-top: 8px;
+    text-align: center !important;
+    @media all and (max-width: 1023px) {
+        font-size: 15px !important;
+        line-height: 20px !important;
+    }
+}
+.jedi-digit {
+    order: 1;
+    background: #F1C320 !important;
+    border-radius: 4px;
+    border: 0 !important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px !important;
+    line-height: 48px;
+    color: #000000 !important;
+    width: 55px !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 80px !important;
+    @media all and (max-width: 1023px) {
+        width: 35px !important;
+        height: 56px !important;
+        font-size: 32px !important;
+    }
+}
+.jedi-digit:nth-child(2) {
+    margin-right: 8px !important;
+}
+// wp style end 
