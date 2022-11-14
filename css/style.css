@@ -62,7 +62,7 @@ textarea {
   background: #5F73FA; }
 
 .header {
-  background: url("../img/img5.jpg") 50% 50%/cover no-repeat;
+  background: linear-gradient(90deg, #000000 38%, rgba(0, 0, 0, 0) 81.09%), url("../img/img5.jpg") 50% 50%/cover no-repeat;
   padding-bottom: 200px;
   padding-top: 32px;
   position: relative;
@@ -71,6 +71,7 @@ textarea {
   min-height: 690px; }
   @media all and (max-width: 1023px) {
     .header {
+      background: linear-gradient(90deg, #000000 5%, rgba(0, 0, 0, 0) 81.09%), url("../img/img5.jpg") 50% 50%/cover no-repeat;
       padding-top: 16px;
       padding-bottom: 0px;
       border-radius: 0;
@@ -261,6 +262,9 @@ textarea {
         font-size: 19px;
         line-height: 24px;
         height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #000000;
         padding: 17px 24px;
         cursor: pointer;
@@ -402,7 +406,8 @@ textarea {
       .galery_block__title {
         margin-bottom: 16px;
         font-size: 24px;
-        line-height: 32px; } }
+        line-height: 32px;
+        text-align: center; } }
   .galery_block__img {
     font-size: 0;
     border-radius: 40px;
@@ -617,7 +622,10 @@ textarea {
       .seo_block__text {
         font-size: 15px;
         line-height: 20px;
-        margin-bottom: 40px; } }
+        margin-bottom: 40px;
+        font-weight: 400; }
+        .seo_block__text b {
+          font-weight: 400 !important; } }
     .seo_block__text ul {
       list-style: none;
       padding: 0;
@@ -714,7 +722,8 @@ textarea {
     @media all and (max-width: 768px) {
       .seo_block__txt {
         font-size: 15px;
-        line-height: 20px; } }
+        line-height: 20px;
+        font-weight: 500; } }
 
 .faq_block__title {
   font-style: normal;
@@ -856,6 +865,9 @@ textarea {
         font-size: 19px;
         line-height: 24px;
         height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #000000;
         padding: 17px 24px;
         cursor: pointer;

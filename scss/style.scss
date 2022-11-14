@@ -79,7 +79,7 @@ textarea {
 
 // header
 .header {
-    background: url('../img/img5.jpg') 50% 50% / cover no-repeat;
+    background: linear-gradient(90deg, #000000 38%, rgba(0, 0, 0, 0) 81.09%), url('../img/img5.jpg') 50% 50% / cover no-repeat;
     padding-bottom: 200px;
     padding-top: 32px;
     position: relative;
@@ -87,6 +87,7 @@ textarea {
     overflow: hidden;
     min-height: 690px;
     @media all and (max-width: 1023px) {
+        background: linear-gradient(90deg, #000000 5%, rgba(0, 0, 0, 0) 81.09%), url('../img/img5.jpg') 50% 50% / cover no-repeat;
         padding-top: 16px;
         padding-bottom: 0px;
         border-radius: 0;
@@ -303,6 +304,9 @@ textarea {
                 font-size: 19px;
                 line-height: 24px;  
                 height: 58px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 color: #000000;
                 padding: 17px 24px;
                 cursor: pointer;
@@ -461,6 +465,7 @@ textarea {
             margin-bottom: 16px;
             font-size: 24px;
             line-height: 32px;
+            text-align: center;
         }
     }
     &__img {
@@ -708,6 +713,10 @@ textarea {
             font-size: 15px;
             line-height: 20px;
             margin-bottom: 40px;
+            font-weight: 400;
+            b {
+                font-weight: 400 !important;
+            }
         }
         ul {
             list-style: none;
@@ -816,6 +825,7 @@ textarea {
         @media all and (max-width: 768px) {
             font-size: 15px;
             line-height: 20px;
+            font-weight: 500;
         }
     }
 }
@@ -975,6 +985,9 @@ textarea {
                 font-size: 19px;
                 line-height: 24px;  
                 height: 58px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 color: #000000;
                 padding: 17px 24px;
                 cursor: pointer;
