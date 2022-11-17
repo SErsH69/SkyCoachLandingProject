@@ -22,3 +22,6 @@ $(document).ready(function(){
         ]
     });
 });
+$('.header__btn').on('click', function() {
+  $('.perfecty-push-settings-container').click();
+})

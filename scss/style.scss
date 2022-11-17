@@ -187,6 +187,7 @@ textarea {
         }
     }
     &__tit {
+        margin: 0;
         font-style: normal;
         font-weight: 700;
         font-size: 72px;
@@ -455,6 +456,7 @@ textarea {
         }
     }
     &__title {
+        margin: 0;
         font-style: normal;
         font-weight: 700;
         font-size: 40px;
@@ -500,6 +502,8 @@ textarea {
 // galery_block end
 // form_sign
 .form_sign {
+    position: relative;
+    z-index: 2;
     margin-top: -75px;
     @media all and (max-width: 1023px) {
         margin-top: 0;
@@ -684,6 +688,21 @@ textarea {
     border-radius: 0px 0px 80px 80px;
     padding-top: 80px;
     padding-bottom: 170px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-radius: 0px 0px 80px 80px;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+        @media all and (max-width: 1023px) {
+            border-radius: 0;
+        }
+    }
     @media all and (max-width: 1023px) {
         padding: 32px 0px;
         border-radius: 0;
@@ -691,6 +710,8 @@ textarea {
     }
     &__title, h2, h1 {
         font-style: normal;
+        position: relative;
+        z-index: 2;
         font-weight: 700;
         font-size: 72px;
         line-height: 80px;
@@ -707,6 +728,8 @@ textarea {
     &__text {
         font-size: 19px;
         line-height: 24px;
+        position: relative;
+        z-index: 2;
         color: #FFFFFF;
         margin-bottom: 60px;
         @media all and (max-width: 1023px) {
@@ -786,6 +809,8 @@ textarea {
         padding-bottom: 16px;
         padding-top: 16px;
         display: flex;
+        position: relative;
+        z-index: 2;
         flex-wrap: wrap;
         margin-left: -12px;
         margin-right: -12px;
@@ -798,6 +823,8 @@ textarea {
         width: calc(33.3% - 24px);
         margin-left: 12px;
         margin-right: 12px;
+        position: relative;
+        z-index: 2;
         margin-bottom: 16px;
         @media all and (max-width: 768px) {
             width: 100%;
@@ -809,6 +836,8 @@ textarea {
         border-radius: 24px;
         overflow: hidden;
         margin-bottom: 16px;
+        position: relative;
+        z-index: 2;
         img {
             width: 100%;
             height: 100%;
@@ -819,6 +848,8 @@ textarea {
         font-style: normal;
         font-weight: 700;
         font-size: 19px;
+        position: relative;
+        z-index: 2;
         line-height: 24px;
         text-align: center;
         color: #FFFFFF;
@@ -832,6 +863,8 @@ textarea {
 // seo_block end
 // faq_block
 .faq_block {
+    position: relative;
+    z-index: 2;
     &__title {
         font-style: normal;
         font-weight: 700;
@@ -1270,5 +1303,118 @@ textarea {
 }
 .jedi-digit:nth-child(2) {
     margin-right: 8px !important;
+}
+
+.perfecty-push-dialog-container {
+    @media all and (max-width: 1023px) {
+        top: unset;
+        bottom: 0;
+    }
+}
+.perfecty-push-dialog-box {
+    background: url('../img/img7.png') 100% 100% no-repeat, url(../img/img5.jpg) 50% 50%/cover no-repeat;
+    border-radius: 40px;
+    padding: 64px;
+    max-width: 675px;
+    width: 100%;
+    @media all and (max-width: 1023px) {
+        padding: 24px;
+        border-radius: 24px 24px 0px 0px;
+        background: url(../img/img5.jpg) 50% 50%/cover no-repeat;
+    
+    }
+    .perfecty-push-dialog-form {
+        width: 100%;
+        .perfecty-push-dialog-title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48px;
+            color: #FFFFFF;
+            max-width: 345px;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 24px;
+            @media all and (max-width: 1023px) {
+                text-align: center;
+                margin-bottom: 16px;
+                font-size: 24px;
+                line-height: 32px;
+                max-width: 100%;
+            }
+            &:after {
+                display: block;
+                text-align: left;
+                content: "Be the first to know the new location of Xur and the items he's selling";
+                margin-top: 24px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 19px;
+                line-height: 24px;
+                color: #FFFFFF;
+                @media all and (max-width: 1023px) {
+                    margin-top: 16px;
+                    font-size: 15px;
+                    text-align: center;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    .perfecty-push-dialog-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media all and (max-width: 1023px) {
+            display: flex;
+            flex-direction: column;
+        }
+        #perfecty-push-dialog-cancel {
+            width: calc(50% - 8px);
+            padding: 17px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 24px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            text-transform: unset;
+            background: #363636;
+            border-radius: 4px;
+            justify-content: center;
+            @media all and (max-width: 1023px) {
+                padding: 14px;
+                font-size: 15px;
+                line-height: 20px;
+                width: 100%;
+                margin-bottom: 16px;
+            }
+        }
+        #perfecty-push-dialog-subscribe {
+            width: calc(50% - 8px);
+            padding: 17px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 24px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            background: #F1C320;
+            border-radius: 4px;
+            text-transform: unset;
+            justify-content: center;
+            @media all and (max-width: 1023px) {
+                padding: 14px;
+                font-size: 15px;
+                width: 100%;
+                line-height: 20px;
+            }
+        }
+    }
+}
+.perfecty-push-settings-container {
+    display: none !important;
 }
 // wp style end 
