@@ -63,7 +63,6 @@ textarea {
 
 /* popup_push */
 .popup_push {
-  display: none;
   position: absolute;
   z-index: 100;
   top: 0;
@@ -74,6 +73,9 @@ textarea {
   background: #03009D;
   backdrop-filter: blur(2px);
   border-radius: 16px; }
+  @media all and (max-width: 1023px) {
+    .popup_push {
+      display: none !important; } }
   .popup_push__in {
     display: flex;
     align-items: center;
@@ -1214,7 +1216,29 @@ textarea {
     top: unset;
     bottom: 0; } }
 
+.perfecty-push-dialog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000; }
+  @media all and (max-width: 1023px) {
+    .perfecty-push-dialog-container {
+      top: unset;
+      bottom: 0; } }
+
 .perfecty-push-dialog-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  width: 550px;
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 7px 30px 0px grey;
+  margin: 0 auto;
+  text-align: center;
   background: url("../img/img7.png") 100% 100% no-repeat, url(../img/img5.jpg) 50% 50%/cover no-repeat;
   border-radius: 40px;
   padding: 64px;
@@ -1269,6 +1293,24 @@ textarea {
         display: flex;
         flex-direction: column; } }
     .perfecty-push-dialog-box .perfecty-push-dialog-buttons #perfecty-push-dialog-cancel {
+      margin: 5px 10px;
+      font-size: 1em;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      border-radius: 0;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      letter-spacing: 0.0222em;
+      line-height: 1.25;
+      opacity: 1;
+      padding: 1em 1.2em;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: opacity 0.15s linear;
       width: calc(50% - 8px);
       padding: 17px;
       font-style: normal;
@@ -1290,6 +1332,24 @@ textarea {
           width: 100%;
           margin-bottom: 16px; } }
     .perfecty-push-dialog-box .perfecty-push-dialog-buttons #perfecty-push-dialog-subscribe {
+      margin: 5px 10px;
+      font-size: 1em;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      border-radius: 0;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      letter-spacing: 0.0222em;
+      line-height: 1.25;
+      opacity: 1;
+      padding: 1em 1.2em;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: opacity 0.15s linear;
       width: calc(50% - 8px);
       padding: 17px;
       font-style: normal;

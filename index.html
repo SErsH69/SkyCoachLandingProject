@@ -16,19 +16,30 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="popup_push" id="popup_push">
-            <div class="popup_push__in">
-                <div class="popup_push__close">Close</div>
-                <div class="popup_push__l-side">
-                    <img src="img/img8.png" alt="">
-                </div>
-                <div class="popup_push__r-side">
-                    <div class="popup_push__title">Please press <br> "Allow" here</div>
-                    <div class="popup_push__btn">Done</div>
-                </div>
+    <div class="popup_push" id="popup_push" style="display: none;">
+        <div class="popup_push__in">
+            <div class="popup_push__close">Close</div>
+            <div class="popup_push__l-side">
+                <img src="img/img8.png" alt="">
+            </div>
+            <div class="popup_push__r-side">
+                <div class="popup_push__title">Please press <br> "Allow" here</div>
+                <div class="popup_push__btn">Done</div>
             </div>
         </div>
+    </div>
+    <div class="perfecty-push-dialog-container" id="perfecty-push-dialog-container" style="display: none;">
+        <div class="perfecty-push-dialog-box">    
+            <div class="perfecty-push-dialog-form">      
+                <div class="perfecty-push-dialog-title">Allow notifications and never miss Xur!</div>      
+                <div class="perfecty-push-dialog-buttons">        
+                    <button id="perfecty-push-dialog-cancel" type="button" class="button secondary">Don't allow</button>        
+                    <button id="perfecty-push-dialog-subscribe" type="button" class="button primary">Allow</button>       
+                </div>    
+            </div>  
+        </div>
+    </div>
+    <div class="wrapper">
         <header class="header">
             <div class="header__top center_block">
                 <a href="#" class="header__logo">

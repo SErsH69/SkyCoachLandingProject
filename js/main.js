@@ -2,23 +2,23 @@ $(function () {
   $('.faq_block__block').on('click', function() {
       $(this).toggleClass('isActive');
   });
-  setTimeout(() => {
-    $('.header__btn').on('click', function() {
-      setTimeout(() => {
-        $('#popup_push').show();
-      }, 1000);
-    });
-    $('.form_sign__btn').on('click', function() {
-      setTimeout(() => {
-        $('#popup_push').show();
-      }, 1000);
-    });
-    $('.footer__btn').on('click', function() {
-      setTimeout(() => {
-        $('#popup_push').show();
-      }, 1000);
-    });
-  }, 2000);
+  // setTimeout(() => {
+  //   $('.header__btn').on('click', function() {
+  //     setTimeout(() => {
+  //       $('#popup_push').show();
+  //     }, 1000);
+  //   });
+  //   $('.form_sign__btn').on('click', function() {
+  //     setTimeout(() => {
+  //       $('#popup_push').show();
+  //     }, 1000);
+  //   });
+  //   $('.footer__btn').on('click', function() {
+  //     setTimeout(() => {
+  //       $('#popup_push').show();
+  //     }, 1000);
+  //   });
+  // }, 2000);
 });
 $(document).ready(function(){
   $('.js_sl1').slick({
@@ -38,19 +38,21 @@ $(document).ready(function(){
         } 
       ]
   });
-  $('.header__btn').on('click', function() {
-    $('.perfecty-push-dialog-container').show();
-  });
-  $('.form_sign__btn').on('click', function() {
-    $('.perfecty-push-dialog-container').show();
-  });
-  $('.footer__btn').on('click', function() {
-    $('.perfecty-push-dialog-container').show();
-  });
-  $('.popup_push__close').on('click', function() {
-    $('.popup_push').hide();
-  })
-  $('.popup_push__btn').on('click', function() {
-    $('.popup_push').hide();
-  })
+  // setTimeout(() => {
+	//   $('.header__btn').on('click', function() {
+	// 	$('.perfecty-push-dialog-container').show();
+	//   });
+	//   $('.form_sign__btn').on('click', function() {
+	// 	$('.perfecty-push-dialog-container').show();
+	//   });
+	//   $('.footer__btn').on('click', function() {
+	// 	$('.perfecty-push-dialog-container').show();
+	//   });
+  // }, 500);
+  // $('.popup_push__close').on('click', function() {
+  //   $('.popup_push').hide();
+  // })
+  // $('.popup_push__btn').on('click', function() {
+  //   $('.popup_push').hide();
+  // })
 });
