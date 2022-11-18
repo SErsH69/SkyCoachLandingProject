@@ -61,6 +61,59 @@ textarea {
 *::-webkit-scrollbar-thumb:hover {
   background: #5F73FA; }
 
+/* popup_push */
+.popup_push {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 110px;
+  width: 360px;
+  padding: 40px;
+  padding-top: 56px;
+  background: #03009D;
+  backdrop-filter: blur(2px);
+  border-radius: 16px; }
+  .popup_push__in {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .popup_push__close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    font-size: 0;
+    cursor: pointer;
+    top: 16px;
+    right: 16px;
+    background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.666687 0.666809C0.298499 1.035 0.298498 1.63195 0.666687 2.00014L4.667 5.99952L0.666687 10.0001C0.324797 10.342 0.300376 10.8811 0.593425 11.2512L0.666687 11.3334C1.03488 11.7016 1.63183 11.7016 2.00002 11.3334L6 7.33252L9.99998 11.3334C10.3419 11.6753 10.881 11.6997 11.2511 11.4067L11.3333 11.3334C11.7015 10.9652 11.7015 10.3683 11.3333 10.0001L7.333 5.99952L11.3333 2.00014C11.6752 1.65825 11.6996 1.11911 11.4066 0.749041L11.3333 0.666809C10.9651 0.298621 10.3682 0.298621 9.99998 0.666809L6 4.66653L2.00002 0.666809C1.65813 0.32492 1.11899 0.300499 0.74892 0.593547L0.666687 0.666809Z' fill='white'/%3E%3C/svg%3E%0A") 50% no-repeat; }
+  .popup_push__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 16px; }
+  .popup_push__btn {
+    padding: 14px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    background: #F1C320;
+    border-radius: 4px;
+    width: 100%; }
+  .popup_push__l-side {
+    width: calc(50% - 16px); }
+  .popup_push__r-side {
+    width: calc(50% - 16px); }
+
+/* popup_push end */
 .header {
   background: linear-gradient(90deg, #000000 38%, rgba(0, 0, 0, 0) 81.09%), url("../img/img5.jpg") 50% 50%/cover no-repeat;
   padding-bottom: 200px;
