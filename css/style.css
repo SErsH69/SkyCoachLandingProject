@@ -63,9 +63,9 @@ textarea {
 
 /* popup_push */
 .popup_push {
-  position: absolute;
+  position: fixed;
   z-index: 100;
-  top: 0;
+  top: 130px;
   left: 110px;
   width: 360px;
   padding: 40px;
@@ -1391,3 +1391,62 @@ textarea {
 
 .perfecty-push-settings-container {
   display: none !important; }
+
+#sub-form-1, #sub-form-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  height: 100%; }
+
+#sub-form-1 .block_top__in, #sub-form-2 .block_top__in {
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0; }
+
+#sub-form-1 .block_top__l-side, #sub-form-2 .block_top__l-side {
+  width: max-content;
+  padding: 10px;
+  border-radius: 5px; }
+
+#sub-form-1 .block_top__title, #sub-form-2 .block_top__title {
+  margin-bottom: 0;
+  line-height: normal;
+  font-size: 20px; }
+
+.top_form {
+  position: relative; }
+
+.push-subs {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none; }
+
+.push-subs_in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
+
+#push-sub {
+  line-height: normal;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  color: #fff;
+  line-height: 48px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #03009D; }
